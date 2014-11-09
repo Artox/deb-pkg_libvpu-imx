@@ -7,7 +7,7 @@
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 DESTDIR=$(CURDIR)/debian/libvpu-imx6
 
@@ -36,3 +36,6 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	dh_auto_install -- DEST_DIR=$(DESTDIR)
+	mv $(DESTDIR)/usr/lib/libvpu.so $(DESTDIR)-dev/usr/lib/
+	mv $(DESTDIR)/usr/lib/libvpu.a $(DESTDIR)-dev/usr/lib/
+	mv $(DESTDIR)/usr/include/* $(DESTDIR)-dev/usr/include/
