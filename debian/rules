@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DESTDIR=$(CURDIR)/debian/libvpu-imx6
+
+# hack: will only work on OBS-created chroots
+SOURCESDIR=/usr/src/packages/SOURCES/
+
+NAME=imx-vpu-3.10.17-1.0.0
+MD5=71ea1b803864101ebf88a1bab45514d2
+
+%:
+	dh $@ --sourcedirectory=$(NAME) --parallel
+
+build:
+	find $(SOURCESDIR) -maxdepth 1 -iname "$(NAME).bin" -exec cp -v {} ./ \; || true
+	./fetch.sh $(NAME).bin $(MD5)
+	chmod +x $(NAME).bin
+	./$(NAME).bin --auto-accept --force
+	dh $@ --sourcedirectory=$(NAME) --parallel
+
+clean:
+	rm -rf $(NAME) $(NAME).bin
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build -- PLATFORM=IMX6Q
+
+override_dh_auto_install:
+	dh_auto_install -- DEST_DIR=$(DESTDIR)
