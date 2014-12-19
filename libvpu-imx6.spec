@@ -7,6 +7,7 @@ Summary: Freescale i.MX VPU library
 Source: %{name}-%{version}.tar.gz
 Source1: imx-vpu-3.10.17-1.0.0.bin
 Source10: rpmlintrc
+Requires: firmware-imx6
 
 %description
 Provides access to the VPU in i.MX CPUs
