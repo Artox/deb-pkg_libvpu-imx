@@ -1,7 +1,7 @@
 Name: libvpu-imx6
 Version: 1
 Release: 1
-License: TODO
+License: Freescale IP
 Group: Productivity/Multimedia/Other
 Summary: Freescale i.MX VPU library
 Source: %{name}-%{version}.tar.gz
@@ -39,6 +39,7 @@ make -C imx-vpu-3.10.17-1.0.0 install DEST_DIR=%{buildroot}
 %files
 %defattr(-,root,root)
 /usr/lib/*.so.*
+%doc imx-vpu-3.10.17-1.0.0/vpu/EULA.txt
 
 %files devel
 %defattr(-,root,root)
