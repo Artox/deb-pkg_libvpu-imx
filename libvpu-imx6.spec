@@ -22,13 +22,13 @@
 # THE SOFTWARE.
 
 Name: libvpu-imx6
-Version: 1
+Version: 5.4.28
 Release: 1
 License: Freescale IP
 Group: Productivity/Multimedia/Other
 Summary: Freescale i.MX VPU library
 Source: %{name}-%{version}.tar.gz
-Source1: imx-vpu-3.10.17-1.0.0.bin
+Source1: imx-vpu-%{version}.bin
 Source10: rpmlintrc
 Requires: firmware-imx6
 
@@ -54,15 +54,15 @@ chmod +x %{SOURCE1}
 %{SOURCE1} --auto-accept --force
 
 %build
-make -C imx-vpu-3.10.17-1.0.0 PLATFORM=IMX6Q
+make -C imx-vpu-%{version} PLATFORM=IMX6Q
 
 %install
-make -C imx-vpu-3.10.17-1.0.0 install DEST_DIR=%{buildroot}
+make -C imx-vpu-%{version} install DEST_DIR=%{buildroot}
 
 %files
 %defattr(-,root,root)
 /usr/lib/*.so.*
-%doc imx-vpu-3.10.17-1.0.0/vpu/EULA.txt
+%doc imx-vpu-%{version}/vpu/EULA.txt
 
 %files devel
 %defattr(-,root,root)

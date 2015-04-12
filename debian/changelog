@@ -1,3 +1,9 @@
+libvpu-imx6 (5.4.28) stable; urgency=low
+
+  * initial release
+
+ -- Josua Mayer <privacy@not.given>  Sun, 12 Apr 2015 13:14:12 +0200
+
 libvpu-imx6 (1) unstable; urgency=low
 
   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>

@@ -12,16 +12,16 @@ export DH_VERBOSE=1
 DESTDIR=$(CURDIR)/debian/tmp
 
 # hack: will only work on OBS-created chroots
-SOURCESDIR=/usr/src/packages/SOURCES/
+SOURCESDIR=/usr/src/packages/SOURCES/ ~
 
-NAME=imx-vpu-3.10.17-1.0.0
-MD5=71ea1b803864101ebf88a1bab45514d2
+NAME=imx-vpu-5.4.28
+MD5=774455b57aaa12bae2e2cecf39b63ac4
 
 %:
 	dh $@ --sourcedirectory=$(NAME) --parallel
 
 build:
-	find $(SOURCESDIR) -maxdepth 1 -iname "$(NAME).bin" -exec cp -v {} ./ \; || true
+	find $(SOURCESDIR) -maxdepth 1 -iname "$(NAME).bin" -exec cp -v {} ./ \; -quit || true
 	./fetch.sh $(NAME).bin $(MD5)
 	chmod +x $(NAME).bin
 	./$(NAME).bin --auto-accept --force
