@@ -24,7 +24,7 @@
 Name: libvpu-imx6
 Version: 5.4.28
 Release: 1
-License: Freescale IP
+License: LA_OPT_FSL_OPEN_3RD_PARTY_IP
 Group: Productivity/Multimedia/Other
 Summary: Freescale i.MX VPU library
 Source: %{name}-%{version}.tar.gz
@@ -62,7 +62,7 @@ make -C imx-vpu-%{version} install DEST_DIR=%{buildroot}
 %files
 %defattr(-,root,root)
 /usr/lib/*.so.*
-%doc imx-vpu-%{version}/vpu/EULA.txt
+%doc imx-vpu-%{version}/COPYING
 
 %files devel
 %defattr(-,root,root)
