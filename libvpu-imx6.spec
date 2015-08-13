@@ -22,7 +22,7 @@
 # THE SOFTWARE.
 
 Name: libvpu-imx6
-Version: 5.4.28
+Version: 5.4.31
 Release: 1
 License: LA_OPT_FSL_OPEN_3RD_PARTY_IP
 Group: Productivity/Multimedia/Other
