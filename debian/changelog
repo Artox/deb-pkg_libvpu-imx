@@ -1,3 +1,9 @@
+libvpu-imx6 (5.4.37) UNRELEASED; urgency=medium
+
+  * Freescale update
+
+ -- Josua Mayer <josua.mayer97@gmail.com>  Sun, 15 Oct 2017 17:03:51 +0200
+
 libvpu-imx6 (5.4.31) stable; urgency=medium
 
   * Freescale update

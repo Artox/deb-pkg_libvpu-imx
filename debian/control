@@ -18,6 +18,6 @@ Description: Development files for libvpu-imx6
 Package: libvpu-imx6
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, firmware-imx (>= 5.0)
+Depends: ${shlibs:Depends}, ${misc:Depends}, firmware-imx (>= 6.0)
 Description: i.MX6 VPU library
  low-level library for accessing the VPU used in Freescale i.MX6 SoCs.

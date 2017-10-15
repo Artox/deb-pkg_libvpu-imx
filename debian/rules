@@ -14,8 +14,8 @@ DESTDIR=$(CURDIR)/debian/tmp
 # hack: will only work on OBS-created chroots
 SOURCESDIR=/usr/src/packages/SOURCES/ ~
 
-NAME=imx-vpu-5.4.31
-MD5=2587d0d011b65021aef469d17ca5c658
+NAME=imx-vpu-5.4.37
+MD5=2b8311cb6e5b5813253db706e807d962
 
 %:
 	dh $@ --sourcedirectory=$(NAME) --parallel

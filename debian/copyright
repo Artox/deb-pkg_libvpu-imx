@@ -46,8 +46,8 @@ License: MIT
 
 Files: imx-vpu-*/*
 Copyright: 2006, 2011 Chips & Media
-           2004-2015 Freescale Semiconductor, Inc.
+           2004-2016 Freescale Semiconductor, Inc.
 License: LA_OPT_FSL_OPEN_3RD_PARTY_IP
- FREESCALE SEMICONDUCTOR SOFTWARE LICENSE AGREEMENT v6 February 2015
+ v18 February 2017
  .
- See EULA.txt for the full text!
+ See /usr/share/doc/libvpu-imx6/COPYING.gz for the full text!
